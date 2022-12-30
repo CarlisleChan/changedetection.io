@@ -73,7 +73,7 @@ def apprise_custom_api_call_wrapper(body, title, notify_type, *args, **kwargs):
         pass
 
 
-    r(url, headers=headers, data=body)
+    r(url, headers=headers, data=body.encode('utf-8'))
 
 
 def process_notification(n_object, datastore):
